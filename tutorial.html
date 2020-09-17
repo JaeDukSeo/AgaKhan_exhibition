@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Phantom by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="assets/css/shepherd.css" />
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<link rel="shortcut icon" href="">
+</head>
+
+<body class="is-preload">
+	<script>
+		AOS.init();
+	</script>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Aga Khan</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">About</a></li>
+				<li><a href="elements.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<header id="start" class="tour1">
+					<h1>Interactive Art Works</h1>
+					<p>Aga Khan Project</p>
+				</header>
+				<section class="tiles">
+
+					<!--  -->
+					<article id="one" class="style1" data-aos="fade-down">
+						<img src="./agakhan/AKM62/HL AKM62.jpg" class="tour2" width="100%" height="auto"
+							usemap="#AKM62" />
+						<map name="AKM62">
+							<area target="" alt="" title="" href="./agakhan/AKM62/B.html#tour"
+								coords="415,609,566,819,590,1011,430,1006,334,930,367,631" shape="poly">
+							<area target="" alt="" title="" href="./agakhan/AKM62/A.html#tour"
+								coords="181,614,114,714,88,822,108,946,227,943,305,959,283,767,250,657,237,616"
+								shape="poly">
+						</map>
+					</article>
+
+
+				</section>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h2>Get in touch</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field half">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input class="tour2" type="submit" value="Send" class="primary" /></li>
+						</ul>
+					</form>
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/imageMapResizer.min.js"></script>
+	<script src="assets/js/shepherd.min.js"></script>
+	<script>
+		$('map').imageMapResize();
+
+		const tour = new Shepherd.Tour({
+			defaultStepOptions: {
+				cancelIcon: {
+					enabled: false
+				},
+				classes: '.shepherd-element .shepherd-modal-overlay-container',
+				scrollTo: true
+			},
+			useModalOverlay: true
+		});
+
+		// Welcome Step
+		tour.addStep({
+			title: 'Welcome!',
+			text: "Lets start the Tour of the interactive exhibition",
+			attachTo: {
+				element: '.tour1',
+				on: 'bottom'
+			},
+			buttons: [
+				{
+					text: 'Next',
+					action: tour.next
+				}
+			],
+			id: 'welcome'
+		});
+
+		tour.addStep({
+			title: 'Give it a Try!',
+			text: "The high-lighted elements are click able!",
+			attachTo: {
+				element: '.tour2',
+				on: 'bottom'
+			},
+			id: 'click'
+		});
+
+
+
+
+		tour.start();
+	</script>
+
+</body>
+
+</html>
